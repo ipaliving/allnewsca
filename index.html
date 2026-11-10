@@ -36,7 +36,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .fn{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:9px 14px}
 .fn[aria-pressed=true]{background:var(--or);border-color:var(--or);color:#1E2430;font-weight:600}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
-.tabs button{flex:1 1 100px;border:1px solid var(--line);background:var(--card);border-radius:8px;padding:8px 14px}
+.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 14px;font-size:14px}
 .tabs button[aria-selected=true]{background:var(--acc);border-color:var(--acc);color:var(--on);font-weight:600}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 0}
 .chips button{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:3px 12px;font-size:13.5px}
@@ -61,6 +61,7 @@ th,td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px soli
 th{color:var(--mute);font-weight:600;white-space:nowrap;background:var(--accbg)}
 tr:last-child td{border-bottom:0}
 .empty{padding:36px 8px;color:var(--mute);text-align:center}
+.foot.note{font-size:12px;margin-top:6px}
 .foot{color:var(--mute);font-size:13px;text-align:center;margin:32px 0 0}
 @media (max-width:640px){.item{grid-template-columns:1fr;gap:6px}h1{font-size:20px}.kpi{grid-template-columns:repeat(2,1fr)}.top b{font-size:13px}.top{flex-wrap:wrap}.top .em{white-space:normal;font-size:12px}}
 </style>
@@ -79,7 +80,7 @@ tr:last-child td{border-bottom:0}
 <div class="tabs" id="tabs" role="tablist"></div>
 <div class="chips" id="chips"></div>
 <div id="list"></div>
-<p class="foot" id="foot"></p>
+<p class="foot note">Mọi thắc mắc góp ý (nếu có), Anh/ Chị vui lòng liên hệ với phòng CAPC hoặc gửi phản hồi <a href="https://forms.cloud.microsoft/Pages/DesignPageV2.aspx?origin=NeoPortalPage&amp;subpage=design&amp;id=O979znYR80a8rSyiFB2vuRwT-zWH3wZHhROMosiNlH9URVg5TUlTMUkzNzYzSFY0RkUxNlZWTDFVTC4u" target="_blank" rel="noopener noreferrer"><b>Tại đây</b></a>.</p>
 </div>
 <script>
 const DATA=[{"date": "2026-09-18", "g": "Vận hành", "t": "", "txt": "Cập nhật tính năng nhắc hạn/quản lý đơn tái tục trên hệ thống DSB", "eff": "2026-09-21", "ch": "Hỗ trợ kinh doanh", "url": ""}, {"date": "2026-07-13", "g": "Sản phẩm", "t": "PTI SOS", "txt": "Ra mắt sản phẩm bảo hiểm PTI HOMECARE", "eff": "2026-07-13", "ch": "Hỗ trợ kinh doanh", "url": "https://kms.ipas.com.vn/post/san-pham-bao-hiem-pti-homecare.ca6698b1-6f6d-4d1d-bfcd-3b7847a68d78", "kw": "HOMECARE"}, {"date": "2026-09-21", "g": "Vận hành", "t": "", "txt": "Dự kiến đóng luồng cấp đơn sản phẩm PTI HOMECARE trên nền tảng portal", "eff": "2026-09-21", "ch": "Hỗ trợ kinh doanh", "url": "", "kw": "HOMECARE", "chk": "Xác nhận ngày đóng luồng thực tế"}, {"date": "2026-10-13", "g": "Vận hành", "t": "", "txt": "Cập nhật danh sách bảo lãnh viện phí tháng 10/2026", "eff": "2026-10-12", "ch": "Hỗ trợ kinh doanh", "url": "https://kms.ipas.com.vn/post/pti-care---cap-nhat-danh-sach-bao-lanh-vien-phi-thang-102026-ngay-cap-nhat-12102026.9a6bccc1-8312-4641-806c-1a8c0666e95b"}, {"date": "2026-10-01", "g": "Cơ chế", "t": "", "txt": "Điều chỉnh payout sản phẩm nghiệp vụ bảo hiểm Tài sản kỹ thuật", "eff": "2026-10-01", "ch": "Hỗ trợ kinh doanh", "url": "https://kms.ipas.com.vn/post/dieu-chinh-payout-san-pham-nghiep-vu-bao-hiem-tai-san-ky-thuat-2026.4562c483-532d-4646-92ed-8bc310e29d62"}, {"date": "2026-10-08", "g": "Chương trình thi đua", "t": "", "txt": "Chương trình thi đua Quý IV/2026: Bứt tốc thần kỳ – Ngựa phi về đích", "eff": "2026-10-01", "ch": "IPAM", "url": "https://kms.ipas.com.vn/post/chuong-trinh-thi-dua-quy-iv2026--but-toc-than---ngua-phi-ve-dich.b18f1ae4-996f-48dc-9bfd-6b5813dbacd7"}, {"date": "2026-11-04", "g": "Vận hành", "t": "", "txt": "Thông báo mở rộng dịch vụ cứu hộ PAN trên toàn quốc", "eff": "2026-11-01", "ch": "IPAM", "url": "https://pti.com.vn/tin-tuc/cuu-ho-pan-mo-rong-toan-quoc-them-diem-tua-them-an-tam?id=9178"}, {"date": "2026-10-30", "g": "Sản phẩm", "t": "PTI Care", "txt": "Triển khai quy tắc bảo hiểm bệnh hiểm nghèo số 77/QĐ - PTI (02/10/2026)", "eff": "2026-10-02", "ch": "Hỗ trợ kinh doanh", "url": "https://kms.ipas.com.vn/post/trien-khai-quy-tac-bao-hiem-benh-hiem-ngheo-so-77qd-pti-ngay-02102026.50de4e38-15e6-4be2-b0a3-d2f5f6af3054"}, {"date": "2026-06-24", "g": "Sản phẩm", "t": "PTI SOS", "txt": "Sản phẩm bảo hiểm FLEXICAR", "eff": "2026-03-23", "ch": "Hỗ trợ kinh doanh", "url": "https://kms.ipas.com.vn/post/san-pham-bao-hiem-rui-ro-chuyen-biet---flexicar.ef26a56c-74ae-488b-8fbf-6496a5ec83b4", "chk": "Hiệu lực sớm hơn ngày update"}, {"date": "2026-08-04", "g": "Sản phẩm", "t": "PTI SOS", "txt": "Chương trình hợp tác chiến lược PTI & HYUNDAI: “HYUNDAI AUTO CARE”", "eff": "2026-05-20", "ch": "Hỗ trợ kinh doanh", "url": "https://kms.ipas.com.vn/post/chuong-trinh-bao-hiem-lien-ket-hyundai-auto-care.c10e3cd0-341c-4c07-93c0-929040623e04", "chk": "Hiệu lực sớm hơn ngày update"}, {"date": "2026-09-30", "g": "Vận hành", "t": "", "txt": "Hỗ trợ bảo lãnh ngoài giờ hành chính", "eff": "2026-10-01", "ch": "Hỗ trợ kinh doanh", "url": "https://kms.ipas.com.vn/post/pti--thong-bao-ho-tro-bao-lanh-ngoai-gio-hanh-chinh.295d2604-7430-491e-a823-094b8c225619"}, {"date": "2026-11-04", "g": "Cơ chế", "t": "", "txt": "Điều chỉnh payout xe cơ giới nghiệp vụ XO.1 & XO.3", "eff": "2026-09-01", "ch": "Hỗ trợ kinh doanh", "url": "https://kms.ipas.com.vn/post/cv-23pti-kdxcg-dieu-chinh-payout-xo1xo3-kenh-ca.5225d08c-f547-47ed-aa92-e75a2d220fdb", "chk": "Hiệu lực sớm hơn ngày update"}, {"date": "2026-11-04", "g": "Vận hành", "t": "", "txt": "Hướng dẫn nhập đơn Bảo hiểm học sinh (CN.5.2) trên Portal", "eff": "2026-08-17", "ch": "Hỗ trợ kinh doanh", "url": "https://kms.ipas.com.vn/post/huong-dan-nhap-don-bao-hiem-hoc-sinh-cn52-tren-portal--ap-dung-tu-17082026.37e63547-2e3c-41ec-98e1-9e6f0092508f"}, {"date": "2026-10-26", "g": "Đào tạo", "t": "", "txt": "Áp dụng quy trình iLEAD đề xuất mở lượt thi LMS", "eff": "2026-10-26", "ch": "IPAM", "url": "https://kms.ipas.com.vn/document/NmFmYWQ0MWYtZjhlYi00NTU4LWFlM2EtMTJhOTgyYWE5YTI5?tmp=dHJ1ZQ==&tmp2=cGRm"}, {"date": "2026-10-21", "g": "Đào tạo", "t": "", "txt": "Chương trình đồng hành WELCOME ONBOARD", "eff": "2026-10-22", "ch": "iCare", "url": ""}];
@@ -126,7 +127,6 @@ function render(){
 const MS=[...new Set(DATA.map(x=>x.date.slice(0,7)))].sort().reverse();
 $('m').innerHTML='<option value="Tất cả">Tất cả thời gian</option>'+MS.map(k=>`<option value="${k}">Tháng ${+k.slice(5)}/${k.slice(0,4)}</option>`).join('');
 $('sub').textContent='Cập nhật thông tin mới dành cho đội ngũ kinh doanh';
-$('foot').innerHTML='Cập nhật lần cuối: '+fd(DATA[0].date)+'. Mọi thắc mắc, góp ý vui lòng liên hệ Thaodt1, Linhnt4 hoặc email <a href="mailto:hotrokinhdoanh@pti.com.vn">hotrokinhdoanh@pti.com.vn</a>.';
 document.body.classList.toggle('chk',location.hash==='#kiemtra');
 $('m').addEventListener('change',e=>{S.m=e.target.value;render()});
 $('q').addEventListener('input',e=>{S.q=e.target.value;render()});
@@ -149,3 +149,4 @@ render();
 </script>
 </body>
 </html>
+
